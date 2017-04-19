@@ -7,6 +7,11 @@ const routes = require('./routes/')
 let app = express();
 
 // <Setup your routes middleware>
+knex.schema.table('Song', function (table) {
+    table.dropColumn('SongId')
+    table.string('Title')
+})
+
 // <catch any undefined routes with a 404 middleware>√√√
 app.use(function(req, res, next) {
     let err = new Error ('Not Found')
