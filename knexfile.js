@@ -12,7 +12,7 @@ module.exports = {
   staging: {
     client: 'postgresql',
     connection: {
-      database: 'musichistory.db',
+      database: 'my_db',
       user:     'username',
       password: 'password'
     },

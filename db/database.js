@@ -1,5 +1,5 @@
 const config = require('../knexfile.js')
-const knex = require('knex')(config)
+const knex = require('knex')(config.development)
 const bookshelf = require('bookshelf')(knex)
 
 bookshelf.plugin('registry')
