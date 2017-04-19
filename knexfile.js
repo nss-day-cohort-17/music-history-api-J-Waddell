@@ -12,7 +12,7 @@ module.exports = {
   staging: {
     client: 'postgresql',
     connection: {
-      database: 'music_history',
+      database: 'musichistory.db',
       user:     'username',
       password: 'password'
     },
@@ -21,10 +21,7 @@ module.exports = {
       max: 10
     },
     migrations: {
-      directory: __dirname + '/db/migrations'
-    },
-    seeds: {
-      directory: __dirname + '/db/seeds/development'
+      tableName: 'knex_migrations'
     }
   },
 

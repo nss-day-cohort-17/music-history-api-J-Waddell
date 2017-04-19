@@ -3,7 +3,7 @@
 const { bookshelf } = require('../db/database')
 
 const Song = bookshelf.Model.extend({
-    tableName: 'songs'
+    tableName: 'Song'
 }, {
     getAll: function() {
         console.log("Get all le songz")

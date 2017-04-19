@@ -4,7 +4,7 @@
 const { Router } = require('express')
 
 // <require the songCtrl to get access to its methods>
-const { getSongs } = require('../controllers/songCtrl')
+const { getSongs, getSong } = require('../controllers/songCtrl')
 
 // <define routes for getting all songs and a single song>
 router.get('/songs', getSongs)
