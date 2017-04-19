@@ -1,6 +1,24 @@
 'use strict'
 
+const { bookshelf } = require('../db/database')
 
+const Song = bookshelf.Model.extend({
+    tableName: 'songs'
+}, {
+    getAll: function() {
+        console.log("Get all le songz")
+        return this.forge()
+        .fetchAll()
+        .then( (rows) => {
+            return rows
+        })
+        .catch ( (error) => {
+            return error
+        })
+    }
+})
+
+module.exports = bookshelf.model('Song', Song)
 
 // <Define a model using bookshelf that describes a song object, as well as 
 // static methods for getting one or all songs from the db>
