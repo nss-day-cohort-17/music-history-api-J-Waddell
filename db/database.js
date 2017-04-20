@@ -1,3 +1,11 @@
+const config = require('../knexfile.js')
+const knex = require('knex')(config.development)
+const bookshelf = require('bookshelf')(knex)
+
+bookshelf.plugin('registry')
+
+module.exports = {knex, bookshelf}
+
 // <Setup the configuration module for knex and bookshelf>
 
 // I have already run 'knex init' at the root of this project to create the knexfile.js.

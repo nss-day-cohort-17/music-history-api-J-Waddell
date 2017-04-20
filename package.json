@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "db:reset": "knex migrate:rollback && knex migrate:latest && knex seed:run",
-    "start": "nodemon bin/music_history",
-    "test": "mocha --recursive --watch -R nyan"
+    "start": "nodemon app.js",
+    "test": "nodemon --exec \"mocha --recursive\" -R nyan"
   },
   "engines": {
     "node": "7.4.0"
